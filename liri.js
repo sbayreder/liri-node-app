@@ -113,5 +113,6 @@ function doWhatItSays() {
       default:
         break;
     }
+    console.log(err);
   });
 }
