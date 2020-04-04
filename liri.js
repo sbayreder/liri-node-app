@@ -11,28 +11,23 @@ var spotify = new Spotify({
 });
 
 var defaultMovie = "Mr. Nobody";
+var command = process.argv[2];
+var info = process.argv[3];
 
-
-
-
-
-var action = process.argv[2];
-var value = process.argv[3];
-
-switch (action) {
+switch (command) {
   case "concert-this":
-    getBands(value)
+    getBands(info)
     break;
   case "spotify-this-song":
     
-    getSongs(value)
+    getSongs(info)
     break;
   case "movie-this":
     
-    if (value == "") {
-      value = defaultMovie;
+    if (info == "") {
+      info = defaultMovie;
     }
-    getMovies(value)
+    getMovies(info)
     break;
   case "do-what-it-says":
     doWhatItSays()
@@ -64,11 +59,8 @@ function getSongs(songName) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-    
     console.log("Artists: ", data.tracks.items[0].album.artists[0].name)
-    
     console.log("Preview Link: ", data.tracks.items[0].preview_url)
-    
     console.log("Album Name: ", data.tracks.items[0].album.name)
   });
 }
@@ -82,7 +74,7 @@ function getMovies(movieName) {
       Title of the movie: ${data.data.Title}
       Year the movie came out: ${data.data.Year}
       IMDB Rating of the movie: ${data.data.Rated}
-      Rotten Tomatoes Rating of the movie: ${data.data.Ratings[1].Value}
+      Rotten Tomatoes Rating of the movie: ${data.data.Ratings[1].info}
       Country where the movie was produced: ${data.data.Country}
       Language of the movie: ${data.data.Language}
       Plot of the movie: ${data.data.Plot}
@@ -105,18 +97,18 @@ function getMovies(movieName) {
 function doWhatItSays() {
   fs.readFile("random.txt", "utf8", function (err, data) {
     data = data.split(",");
-    var action = data[0]
-    var value = data[1]
+    var command = data[0]
+    var info = data[1]
     
-    switch (action) {
+    switch (command) {
       case "concert-this":
-        getBands(value)
+        getBands(info)
         break;
       case "spotify-this-song":
-        getSongs(value)
+        getSongs(info)
         break;
       case "movie-this":
-        getMovies(value)
+        getMovies(info)
         break;
       default:
         break;
