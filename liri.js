@@ -27,7 +27,8 @@ switch (command) {
     if (info == "") {
       info = defaultMovie;
     }
-    getMovies(info)
+    getMovies(info);
+    //console.log(info);
     break;
   case "do-what-it-says":
     doWhatItSays()
@@ -67,7 +68,7 @@ function getSongs(songName) {
 
 function getMovies(movieName) {
   
-  axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=506b625f" + movieName)
+  axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=506b625f&t=" + movieName)
     .then(function (data) {
       
       var results = `
