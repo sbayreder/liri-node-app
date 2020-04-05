@@ -1,26 +1,26 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "this application is for grabbing data from APIs",
-  "main": "liri.js",
+  "description": "**LIRI** is a Language Interpretation and Recognition Interface.",
+  "main": "keys.js",
+  "dependencies": {
+    "axios": "^0.18.1",
+    "fs": "^0.0.1-security",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.1.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bdavis127/liri-node-app.git"
+    "url": "git+https://github.com/sbayreder/liri-node-app.git"
   },
-  "author": "Brett Davis",
-  "license": "MIT",
+  "author": "Scott Bayreder",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bdavis127/liri-node-app/issues"
+    "url": "https://github.com/sbayreder/liri-node-app/issues"
   },
-  "homepage": "https://github.com/bdavis127/liri-node-app#readme",
-  "dependencies": {
-    "axios": "^0.18.1",
-    "dotenv": "^6.1.0",
-    "fs": "0.0.1-security",
-    "moment": "^2.24.0",
-    "node-spotify-api": "^1.1.1"
-  }
+  "homepage": "https://github.com/sbayreder/liri-node-app#readme"
 }
