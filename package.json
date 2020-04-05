@@ -4,8 +4,9 @@
   "description": "**LIRI** is a Language Interpretation and Recognition Interface.",
   "main": "keys.js",
   "dependencies": {
-    "axios": "^0.18.1",
-    "fs": "^0.0.1-security",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
     "moment": "^2.24.0",
     "node-spotify-api": "^1.1.1"
   },

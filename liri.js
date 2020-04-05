@@ -88,10 +88,9 @@ function getMovies(movieName) {
       console.log(error);
     });
     
-    if (movieName === "Mr. Nobody") {
-      console.log("-----------------------");
-      console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
-      console.log("It's on Netflix!");
+    if (movieName === "Bright") {
+      console.log("If you haven't watched 'Bright,' then you should: http://www.imdb.com/title/tt5519340/");
+      
   };
 }
 
